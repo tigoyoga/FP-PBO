@@ -9,6 +9,9 @@
  */
 
 import java.awt.TextField;
+import java.io.File;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import javax.swing.JTextField;
@@ -142,18 +145,27 @@ public class MainFrame extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel7.setText("Nasi Goreng");
 
+        jTextSoto.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        jTextSoto.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextSoto.setText("0");
         jTextSoto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextSotoActionPerformed(evt);
             }
         });
 
+        jTextAyam.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        jTextAyam.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextAyam.setText("0");
         jTextAyam.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextAyamActionPerformed(evt);
             }
         });
 
+        jTextNasgor.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        jTextNasgor.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextNasgor.setText("0");
         jTextNasgor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextNasgorActionPerformed(evt);
@@ -210,12 +222,18 @@ public class MainFrame extends javax.swing.JFrame {
         jLabel17.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel17.setText("Harga Makanan");
 
+        jTextMakan.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        jTextMakan.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextMakan.setText("0");
         jTextMakan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextMakanActionPerformed(evt);
             }
         });
 
+        jTextMinum.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        jTextMinum.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextMinum.setText("0");
         jTextMinum.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextMinumActionPerformed(evt);
@@ -228,6 +246,9 @@ public class MainFrame extends javax.swing.JFrame {
         jLabel19.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel19.setText("Total Pesanan");
 
+        jTextTotal1.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        jTextTotal1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextTotal1.setText("0");
         jTextTotal1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextTotal1ActionPerformed(evt);
@@ -377,18 +398,27 @@ public class MainFrame extends javax.swing.JFrame {
         jLabel10.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel10.setText("Es Sirup");
 
+        jTextSirup.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        jTextSirup.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextSirup.setText("0");
         jTextSirup.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextSirupActionPerformed(evt);
             }
         });
 
+        jTextJeruk.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        jTextJeruk.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextJeruk.setText("0");
         jTextJeruk.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextJerukActionPerformed(evt);
             }
         });
 
+        jTextTeh.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        jTextTeh.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextTeh.setText("0");
         jTextTeh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextTehActionPerformed(evt);
@@ -451,18 +481,27 @@ public class MainFrame extends javax.swing.JFrame {
         jLabel16.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel16.setText("Total");
 
+        jTextTotal2.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        jTextTotal2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextTotal2.setText("0");
         jTextTotal2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextTotal2ActionPerformed(evt);
             }
         });
 
+        jTextPajak.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        jTextPajak.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextPajak.setText("0");
         jTextPajak.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextPajakActionPerformed(evt);
             }
         });
 
+        jTextTotal3.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        jTextTotal3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextTotal3.setText("0");
         jTextTotal3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextTotal3ActionPerformed(evt);
@@ -586,6 +625,38 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jBtnTotalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnTotalActionPerformed
         // TODO add your handling code here:
+         SubClass ItemCost = new SubClass();
+        
+        double iPajak, iSubtotal, iTotal;
+        
+        ItemCost.AyamGoreng = ItemCost.hAyamGoreng * Double.parseDouble(jTextAyam.getText());
+        ItemCost.NasiGoreng = ItemCost.hNasiGoreng * Double.parseDouble(jTextNasgor.getText());
+        ItemCost.SotoAyam = ItemCost.hSotoAyam * Double.parseDouble(jTextSoto.getText());
+        ItemCost.EsTeh = ItemCost.hEsTeh * Double.parseDouble(jTextTeh.getText());
+        ItemCost.EsJeruk = ItemCost.hEsJeruk * Double.parseDouble(jTextJeruk.getText());
+        ItemCost.EsSirup = ItemCost.hEsSirup * Double.parseDouble(jTextSirup.getText());
+
+        iSubtotal = ItemCost.GetAmount();
+        iPajak = ItemCost.totalPajak(iSubtotal);
+        iTotal = iSubtotal + iPajak;
+        
+        String SubTotal = String.format("Rp%.2f"+"0", iSubtotal);
+        jTextTotal1.setText(SubTotal);
+        
+        String Pajak = String.format("Rp%.2f"+"0", iPajak);
+        jTextPajak.setText(Pajak);
+        
+        String Total = String.format("Rp%.2f"+"0", iTotal);
+        jTextTotal3.setText(Total);
+        
+        String Makanan = String.format("Rp%.2f"+"0", ItemCost.Makanan);
+        jTextMakan.setText(Makanan);
+        
+        String Minuman = String.format("Rp%.2f"+"0", ItemCost.Minuman);
+        jTextMinum.setText(Minuman);
+        
+        String TotalCost = String.format("Rp%.2f"+"0", ItemCost.TotalM);
+        jTextTotal2.setText(TotalCost);
     }//GEN-LAST:event_jBtnTotalActionPerformed
 
     private void jTextMakanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextMakanActionPerformed
@@ -597,19 +668,91 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextMinumActionPerformed
 
     private void jTextTotal1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextTotal1ActionPerformed
-        // TODO add your handling code here:
+        // Total
+       
+        
+        
     }//GEN-LAST:event_jTextTotal1ActionPerformed
 
     private void jBtnResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnResetActionPerformed
-        // TODO add your handling code here:
+        // Reset
+        jTextAyam.setText("0");
+        jTextJeruk.setText("0");
+        jTextMakan.setText("");
+        jTextMinum.setText("");
+        jTextNasgor.setText("0");
+        jTextPajak.setText("");
+        jTextSirup.setText("0");
+        jTextSoto.setText("0");
+        jTextTeh.setText("0");
+        jTextTotal1.setText("");
+        jTextTotal2.setText("");
+        jTextTotal3.setText("");
+        jTextArr.setText(null);
     }//GEN-LAST:event_jBtnResetActionPerformed
 
     private void jBtnStrukActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnStrukActionPerformed
-        // TODO add your handling code here:
+        // Receipt
+  
+        int nomorOrder = 1325 + (int) (Math.random()*4238);
+        
+        Calendar timer = Calendar.getInstance();
+        timer.getTime();
+        SimpleDateFormat tTime = new SimpleDateFormat("HH:mm:ss");
+        tTime.format(timer.getTime());
+        
+        SimpleDateFormat tDate = new SimpleDateFormat("dd-MMM-yyyy");
+        tDate.format(timer.getTime());
+        
+        jTextArr.append("                    WARUNG SEDERHANA\n\n" +
+                "No Order : " + nomorOrder +
+                "\n==================================\n" +
+                " Makanan : \t\t" + jTextMakan.getText() + "\n\n" +
+                " Minuman : \t\t" + jTextMinum.getText() + "\n\n" +
+                " Total Pesanan : \t" + jTextTotal1.getText() + "\n" +
+                "\n==================================\n" +
+                " Subtotal : \t\t" + jTextTotal2.getText() + "\n\n" +
+                " PPN : \t\t" + jTextTotal3.getText() + "\n\n" +
+                " Total Bayar : \t\t" + jTextTotal3.getText() + "\n" +
+                "\n==================================\n" +
+                "\n Tanggal : \t" + tDate.format(timer.getTime()) +
+                "\n Waktu : \t" + tTime.format(timer.getTime()) +
+                "\n\n\n Terimakasih"
+                );
+        
+        
+        try{
+        
+        File file = new File("receipt" + nomorOrder + ".txt");
+        
+        file.createNewFile();
+        
+        PrintWriter pw = new PrintWriter(file);
+        pw.println("                    WARUNG SEDERHANA\n\n" +
+                "No Order : " + nomorOrder +
+                "\n==================================\n" +
+                " Makanan : \t\t" + jTextMakan.getText() + "\n\n" +
+                " Minuman : \t\t" + jTextMinum.getText() + "\n\n" +
+                " Total Pesanan : \t" + jTextTotal1.getText() + "\n" +
+                "\n==================================\n" +
+                " Subtotal : \t\t" + jTextTotal2.getText() + "\n\n" +
+                " PPN : \t\t" + jTextTotal3.getText() + "\n\n" +
+                " Total Bayar : \t\t" + jTextTotal3.getText() + "\n" +
+                "\n==================================\n" +
+                "\n Tanggal : \t" + tDate.format(timer.getTime()) +
+                "\n Waktu : \t" + tTime.format(timer.getTime()) +
+                "\n\n\n Terimakasih");
+        
+        pw.close();
+        } catch(IOException e) {
+            e.printStackTrace();
+        }
     }//GEN-LAST:event_jBtnStrukActionPerformed
 
     private void jBtnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnExitActionPerformed
-        // TODO add your handling code here:
+        // Exit
+        SubClass iExit = new SubClass();
+        iExit.iExitSystem();
     }//GEN-LAST:event_jBtnExitActionPerformed
 
     /**

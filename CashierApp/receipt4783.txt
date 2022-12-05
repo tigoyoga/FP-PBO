@@ -1,0 +1,24 @@
+                    WARUNG SEDERHANA
+
+No Order : 4783
+==================================
+ Makanan : 		Rp17.000
+
+ Minuman : 		Rp5.000
+
+ Total Pesanan : 	Rp22.000
+
+==================================
+ Subtotal : 		Rp22.000
+
+ PPN : 		Rp24.200
+
+ Total Bayar : 		Rp24.200
+
+==================================
+
+ Tanggal : 	06-Dec-2022
+ Waktu : 	05:15:04
+
+
+ Terimakasih
