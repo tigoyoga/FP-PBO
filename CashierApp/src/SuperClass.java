@@ -1,4 +1,6 @@
 
+import java.util.ArrayList;
+import java.util.List;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
@@ -11,29 +13,28 @@ import javax.swing.JOptionPane;
  *
  * @author LENOVO
  */
-public class SuperClass {
-    
-    public double AyamGoreng;
-    public double SotoAyam;
-    public double NasiGoreng;
-    
-    public double EsTeh;
-    public double EsJeruk;
-    public double EsSirup;
-    
+public class SuperClass{
+
     public double Makanan;
     public double Minuman;
     public double TotalM;
     
-    public double AllTotal;
+    double Pajak = 0.1;
+    
+    Food AyamGoreng = new Food("Ayam Goreng", 17.000, null);
+    Food SotoAyam = new Food("Soto Ayam", 20.000, null);
+    Food NasiGoreng = new Food("Nasi Goreng", 15.000, null);
+    
+    Drink EsTeh = new Drink("Es Teh", 3.000, null);
+    Drink EsJeruk = new Drink("Es Jeruk", 5.000, null);
+    Drink EsSirup = new Drink("Es Sirup", 10.000, null);
     
     public double GetAmount(){
-        Makanan = AyamGoreng + SotoAyam + NasiGoreng;
-        Minuman = EsTeh + EsJeruk + EsSirup;
+        Makanan = AyamGoreng.jumlah + SotoAyam.jumlah + NasiGoreng.jumlah;
+        Minuman = EsTeh.jumlah + EsJeruk.jumlah + EsSirup.jumlah;
         TotalM = Makanan + Minuman;
-        AllTotal = TotalM;
         
-        return AllTotal;
+        return TotalM;
     }
     
     private JFrame frame;
@@ -46,19 +47,7 @@ public class SuperClass {
                 System.exit(0);
         }
     }
-    
-// ========= HARGA ============
-    public double hAyamGoreng = 17.000;
-    public double hSotoAyam = 20.000;
-    public double hNasiGoreng = 15.000 ;
-    
-    public double hEsTeh = 5.000;
-    public double hEsJeruk = 8.000;
-    public double hEsSirup = 10.000;
-    
-// ========== PAJAK ===============
-    public double Pajak = 0.1;
-    
+
     public double totalPajak(double hPajak){
         double hargaPajak = Pajak * hPajak;
         return hargaPajak;
