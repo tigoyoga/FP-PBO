@@ -7,6 +7,7 @@
  *
  * @author Tigo S Yoga
  */
+
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -549,12 +550,13 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jBtnTotalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnTotalActionPerformed
         // TODO add your handling code here:
+        SuperClass ListMenu = new SuperClass();
         double iPajak, iSubtotal, iTotal;
-
+        
         ListMenu.AyamGoreng.jumlah = ListMenu.AyamGoreng.getPrice() * Double.parseDouble(jTextAyam.getText());
         ListMenu.NasiGoreng.jumlah = ListMenu.NasiGoreng.getPrice() * Double.parseDouble(jTextNasgor.getText());
         ListMenu.SotoAyam.jumlah = ListMenu.SotoAyam.getPrice() * Double.parseDouble(jTextSoto.getText());
-
+        
         ListMenu.EsTeh.jumlah = ListMenu.EsTeh.getPrice() * Double.parseDouble(jTextTeh.getText());
         ListMenu.EsJeruk.jumlah = ListMenu.EsJeruk.getPrice() * Double.parseDouble(jTextJeruk.getText());
         ListMenu.EsSirup.jumlah = ListMenu.EsSirup.getPrice() * Double.parseDouble(jTextSirup.getText());
@@ -562,20 +564,20 @@ public class MainFrame extends javax.swing.JFrame {
         iSubtotal = ListMenu.GetAmount();
         iPajak = ListMenu.totalPajak(iSubtotal);
         iTotal = iSubtotal + iPajak;
-
-        String Pajak = String.format("Rp%.2f" + "0", iPajak);
+        
+        String Pajak = String.format("Rp%.2f"+"0", iPajak);
         jTextPajak.setText(Pajak);
-
-        String Total = String.format("Rp%.2f" + "0", iTotal);
+        
+        String Total = String.format("Rp%.2f"+"0", iTotal);
         jTextTotal3.setText(Total);
-
-        String Makanan = String.format("Rp%.2f" + "0", ListMenu.Makanan);
+        
+        String Makanan = String.format("Rp%.2f"+"0", ListMenu.Makanan);
         jTextMakan.setText(Makanan);
-
-        String Minuman = String.format("Rp%.2f" + "0", ListMenu.Minuman);
+        
+        String Minuman = String.format("Rp%.2f"+"0", ListMenu.Minuman);
         jTextMinum.setText(Minuman);
-
-        String TotalCost = String.format("Rp%.2f" + "0", ListMenu.TotalM);
+        
+        String TotalCost = String.format("Rp%.2f"+"0", ListMenu.TotalM);
         jTextTotal2.setText(TotalCost);
     }//GEN-LAST:event_jBtnTotalActionPerformed
 
@@ -597,70 +599,73 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jBtnStrukActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnStrukActionPerformed
         // Receipt
-
-        int nomorOrder = 1325 + (int) (Math.random() * 4238);
-
+        
+        
+        int nomorOrder = 1325 + (int) (Math.random()*4238);
+        
         Calendar timer = Calendar.getInstance();
         timer.getTime();
         SimpleDateFormat tTime = new SimpleDateFormat("HH:mm:ss");
         tTime.format(timer.getTime());
-
+        
         SimpleDateFormat tDate = new SimpleDateFormat("dd-MMM-yyyy");
         tDate.format(timer.getTime());
-
-        jTextArr.append("                    WARUNG SEDERHANA\n\n"
-                + "No Order : " + nomorOrder
-                + "\n==================================\n"
-                + " Makanan : \t\t" + jTextMakan.getText() + "\n\n"
-                + " Minuman : \t\t" + jTextMinum.getText() + "\n\n"
-                + "\n==================================\n"
-                + " Subtotal : \t\t" + jTextTotal2.getText() + "\n\n"
-                + " PPN : \t\t" + jTextTotal3.getText() + "\n\n"
-                + " Total Bayar : \t\t" + jTextTotal3.getText() + "\n"
-                + "\n==================================\n"
-                + "\n Tanggal : \t" + tDate.format(timer.getTime())
-                + "\n Waktu : \t" + tTime.format(timer.getTime())
-                + "\n\n\n Terimakasih"
-        );
-
-        try {
-
-            File file = new File("receipt-" + nomorOrder + ".txt");
-
-            file.createNewFile();
-
-            PrintWriter pw = new PrintWriter(file);
-            pw.println("                    WARUNG SEDERHANA\n\n"
-                    + "No Order : " + nomorOrder
-                    + "\n==================================\n"
-                    + " Makanan : \t\t" + jTextMakan.getText() + "\n\n"
-                    + " Minuman : \t\t" + jTextMinum.getText() + "\n\n"
-                    + "\n==================================\n"
-                    + " Subtotal : \t\t" + jTextTotal2.getText() + "\n\n"
-                    + " PPN : \t\t" + jTextTotal3.getText() + "\n\n"
-                    + " Total Bayar : \t\t" + jTextTotal3.getText() + "\n"
-                    + "\n==================================\n"
-                    + "\n Tanggal : \t" + tDate.format(timer.getTime())
-                    + "\n Waktu : \t" + tTime.format(timer.getTime())
-                    + "\n\n\n Terimakasih");
-
-            pw.close();
-        } catch (IOException e) {
+        
+        jTextArr.append("                    WARUNG SEDERHANA\n\n" +
+                "No Order : " + nomorOrder +
+                "\n==================================\n" +
+                " Makanan : \t\t" + jTextMakan.getText() + "\n\n" +
+                " Minuman : \t\t" + jTextMinum.getText() + "\n\n" +
+                "\n==================================\n" +
+                " Subtotal : \t\t" + jTextTotal2.getText() + "\n\n" +
+                " PPN : \t\t" + jTextTotal3.getText() + "\n\n" +
+                " Total Bayar : \t\t" + jTextTotal3.getText() + "\n" +
+                "\n==================================\n" +
+                "\n Tanggal : \t" + tDate.format(timer.getTime()) +
+                "\n Waktu : \t" + tTime.format(timer.getTime()) +
+                "\n\n\n Terimakasih"
+                );
+        
+        try{
+        
+        File file = new File("receipt-" + nomorOrder + ".txt");
+        
+        
+        file.createNewFile();
+        
+        PrintWriter pw = new PrintWriter(file);
+        pw.println("                    WARUNG SEDERHANA\n\n" +
+                "No Order : " + nomorOrder +
+                "\n==================================\n" +
+                " Makanan : \t\t" + jTextMakan.getText() + "\n\n" +
+                " Minuman : \t\t" + jTextMinum.getText() + "\n\n" +
+                "\n==================================\n" +
+                " Subtotal : \t\t" + jTextTotal2.getText() + "\n\n" +
+                " PPN : \t\t" + jTextTotal3.getText() + "\n\n" +
+                " Total Bayar : \t\t" + jTextTotal3.getText() + "\n" +
+                "\n==================================\n" +
+                "\n Tanggal : \t" + tDate.format(timer.getTime()) +
+                "\n Waktu : \t" + tTime.format(timer.getTime()) +
+                "\n\n\n Terimakasih");
+        
+        
+        pw.close();
+        } catch(IOException e) {
             e.printStackTrace();
         }
-
-
+        
+        
     }//GEN-LAST:event_jBtnStrukActionPerformed
 
     private void jBtnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnExitActionPerformed
         // Exit
-        MenuApp iExit = new MenuApp();
+        SuperClass iExit = new SuperClass();
         iExit.iExitSystem();
     }//GEN-LAST:event_jBtnExitActionPerformed
 
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
         // Label Ayam Goreng di klik
-
+        
         jTextArr.setText("");
         jTextArr.append(ListMenu.AyamGoreng.printInfo());
     }//GEN-LAST:event_jLabel5MouseClicked
@@ -679,21 +684,21 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
         //Label Es teh di klik
-
+      
         jTextArr.setText("");
         jTextArr.append(ListMenu.EsTeh.printInfo());
     }//GEN-LAST:event_jLabel8MouseClicked
 
     private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
         //Label Es Jeruk di klik
-
+         
         jTextArr.setText("");
         jTextArr.append(ListMenu.EsJeruk.printInfo());
     }//GEN-LAST:event_jLabel9MouseClicked
 
     private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
         //Label Es Sirup di klik
-
+         
         jTextArr.setText("");
         jTextArr.append(ListMenu.EsSirup.printInfo());
     }//GEN-LAST:event_jLabel10MouseClicked
@@ -738,7 +743,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
     }
-    MenuApp ListMenu = new MenuApp();
+    SuperClass ListMenu = new SuperClass();
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jBtnExit;
