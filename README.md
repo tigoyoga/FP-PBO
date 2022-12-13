@@ -6,9 +6,12 @@ NRP   : 5025211125
 
 Kelas : PBO B
 
+[Link Sumber](https://youtu.be/A_BJsa8of14)
+
+
 Deskripsi
 -----
-Aplikasi Kasir Sederhana menggunakan Java. Aplikasi ini berfungsi menghitung total pembayaran berdasarkan menu makanan dan minuman yang dipilih. Aplikasi ini juga dapat menampilkan struk transaksi dan riwayat transaksi. 
+Aplikasi Kasir Sederhana menggunakan Java. Aplikasi ini berfungsi menghitung total pembayaran berdasarkan menu makanan dan minuman yang dipilih. Aplikasi ini juga dapat menampilkan struk transaksi dan riwayat transaksi.
 
 Implementasi
 -----
