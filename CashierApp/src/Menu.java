@@ -5,42 +5,41 @@
 
 /**
  *
- * @author LENOVO
+ * @author Tigo S Yoga
  */
 public abstract class Menu {
+
     private String foodName;
     private double price;
     public double jumlah;
-    
-    public Menu(String foodName, double price){
-     this.foodName = foodName;
-     this.price = price;
-    }
-    
-    public Menu(String foodName){
-     this(foodName, 0);
+
+    public Menu(String foodName, double price) {
+        this.foodName = foodName;
+        this.price = price;
     }
 
-     public void setName( String foodName )
-    {
-      this.foodName = foodName;
+    public Menu(String foodName) {
+        this(foodName, 0);
     }
 
-    public void setPrice( double price )
-    {
-      this.price = price;
+    public void setName(String foodName) {
+        this.foodName = foodName;
     }
- 
-    public String getName(){
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public String getName() {
         return this.foodName;
     }
- 
-    public double getPrice(){
+
+    public double getPrice() {
         return this.price;
     }
-    
-    public String printInfo(){
-    return ( "Nama menu : " + this.foodName + "\nHarga menu : " + String.format("Rp%.2f"+"0", this.getPrice()) );
- }
- 
+
+    public String printInfo() {
+        return ("Nama menu : " + this.foodName + "\nHarga menu : " + String.format("Rp%.2f" + "0", this.getPrice()));
+    }
+
 }
